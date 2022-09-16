@@ -67,12 +67,9 @@ def get_cookies(UID='1600358281310099714', COOK_ID='1606041181', JSESSIONID='C1E
 class Parser:
     """ Мультипоточный парвсер данных(ЕГРЮЛ) с сайта сайта налоговой
         :function
-           - get_proxy() - получаем случайный прокси из списка
-                           https://github.com/TheSpeedX/PROXY-List/blob/master/http.txt
-                           Зависимость от requests_standart()
-           - parser() - начальный парсинг списка по условию поиска
-           - full() - парсинг по ИНН
-           - roscom() - парсинг данных Роскомнадзора
+           - get_data() - начальный парсинг списка по условию поиска
+           - get_full() - парсинг по ИНН из pdf выписки
+           - get_roscom() - парсинг данных Роскомнадзора
     """
 
     def get_data(self):
@@ -83,5 +80,3 @@ class Parser:
 
     def get_roscom(self):
         pass
-
-
